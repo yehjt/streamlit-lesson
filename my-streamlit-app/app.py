@@ -118,7 +118,7 @@ with col_left:
         .sort_values("resale_price", ascending=False)
         .head(10)  # Top 10 towns only for clarity
     )
-    fig_town = px.bar(avg_price_by_town, x="town", y="resale_price")
+    fig_town = px.bar(avg_price_by_town, x="town", y="resale_price",color_discrete_sequence=["red"])
     st.plotly_chart(fig_town, width="stretch")
 
 # Tells Streamlit to put the following content in the right column
